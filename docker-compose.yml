@@ -1,0 +1,19 @@
+services:
+  queue:
+    image: apache/kafka:latest
+    ports:
+      - 9092:9092/tcp
+  db:
+    image: opensearchproject/opensearch:latest
+    ports:
+      - 9200:9200/tcp
+      - 9300:9300/tcp
+      - 9600:9600/tcp
+      - 9650:9650/tcp
+    environment:
+      - cluster.name=opensearch-cluster
+      - node.name=opensearch-node1
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=str0ngp@ssword

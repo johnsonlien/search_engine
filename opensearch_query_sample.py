@@ -1,7 +1,7 @@
 from opensearchpy import OpenSearch
 import json
 
-auth = ('admin', 'G@-AS1;S3cur!ty')
+auth = ('admin', 'str0ngp@ssword')
 
 client = OpenSearch(
     hosts=[{'host': 'localhost', 'port': 9200}],
