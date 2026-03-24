@@ -1,0 +1,2 @@
+https://opensearch.org/
+https://pypi.org/project/kafka-python/

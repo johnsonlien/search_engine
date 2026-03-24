@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class AbstractQueue(ABC):
-    def __init__(self):
+    def __init__(self, pull_topic="", push_topic=""):
         pass
 
     def push(self, topic, data):
